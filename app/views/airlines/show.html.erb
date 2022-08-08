@@ -1,0 +1,9 @@
+<% @airline.flights.each do |flight| %>
+  <% flight.passengers.uniq.each do |passenger| %>
+  <div class="passenger-<%= passenger.id %>">
+    <% if passenger.age >= 18 %>
+      <%= passenger.name %>
+    <% end %>
+    </div>
+  <% end %>
+<% end %>
